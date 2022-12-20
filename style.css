@@ -1,0 +1,83 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background: #161616;
+    margin: 20px 80px;
+    color: whitesmoke;
+    border-radius: 40px;
+}
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-content{
+    width: 40%;
+}
+
+.banner-content h1{
+    font-size: 52px;
+
+}
+.banner-content p{
+    font-size: 18px;
+    color: rgb(155, 153, 153);
+    margin: 15px 0;
+}
+.banner-content button {
+    padding: 10px 20px;
+    border: none ;
+    outline: none;
+    color: whitesmoke;
+    background: rgb(243, 16, 16);
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+    text-shadow: 5px 5px 5px rgb(12, 12, 12);
+    transition: all 3s ease ;
+    
+}
+
+.banner-content button:hover{
+    color: rgb(243, 16, 16);
+    background: whitesmoke;
+    transform: rotate(1080deg);
+}
+
+
+
+header:hover h1::after{
+    content:" ";
+    margin-left: 5px;
+    animation: blinkL infinite 1.2s ease-in-out;
+}
+
+header:hover .messi{
+    animation: messiBig infinite 1.2s ease-in-out;
+}
+
+
+@keyframes messiBig {
+    0%{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}
+@keyframes blinkL {
+    from{
+        border-left: none;
+    }
+    to{
+        border-left: 10px solid white;
+    }
+}
